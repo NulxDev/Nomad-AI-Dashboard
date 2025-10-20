@@ -8,7 +8,6 @@ Deployed with free tools GitHub Pages and designed for rapid iteration.
 - ⚡ Instant UI/UX iteration with clean, minimal design
 - 📊 Custom dashboards for dropshipping, productivity, and more
 - 🌑 Dark mode + favicon support
-- 🚀 Free deployment (Netlify, GitHub Pages)
 
 ## 📦 Tech Stack
 - HTML, CSS, JavaScript
