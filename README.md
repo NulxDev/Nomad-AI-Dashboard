@@ -1,7 +1,21 @@
-Un tableau de bord moderne, épuré et personnalisable qui permet à l’utilisateur de connecter sa propre clé API (OpenAI, SambaNova, etc.) 
-et d’interagir avec un assistant AI dans une interface réaliste et technologique.
+# Nomad AI Dashboard 🌍
 
-Licence
-Tous droits réservés.  
-Le code de ce projet ne doit pas être copié ou utilisé pour d’autres projets.
+A lightweight, privacy‑first dashboard built for digital nomads, entrepreneurs, and productivity enthusiasts.  
+Deployed with free tools (Netlify, GitHub Pages) and designed for rapid iteration.
 
+## ✨ Features
+- 🔒 Privacy‑focused: no hidden data collection
+- ⚡ Instant UI/UX iteration with clean, minimal design
+- 📊 Custom dashboards for dropshipping, productivity, and more
+- 🌑 Dark mode + favicon support
+- 🚀 Free deployment (Netlify, GitHub Pages)
+
+## 📦 Tech Stack
+- HTML, CSS, JavaScript
+- API integrations with client‑side security
+- Lightweight, portable design for global use
+
+## 🚀 Getting Started
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/nomad-ai-dashboard.git
