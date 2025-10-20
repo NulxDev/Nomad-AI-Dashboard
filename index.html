@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Nomad AI Dashboard</title>
@@ -20,10 +20,10 @@
       </div>
       <nav class="nav">
         <button class="nav-item active" data-section="dashboard">Dashboard</button>
-        <button class="nav-item" data-section="ideas">Idées</button>
-        <button class="nav-item" data-section="orders">Commandes</button>
+        <button class="nav-item" data-section="ideas">Ideas</button>
+        <button class="nav-item" data-section="orders">Orders</button>
         <button class="nav-item" data-section="ai">AI</button>
-        <button class="nav-item" data-section="settings">Paramètres</button>
+        <button class="nav-item" data-section="settings">Settings</button>
       </nav>
       <div class="sidebar-footer">
         <small>v0.2 • Local</small>
@@ -36,40 +36,40 @@
       <!-- Top bar -->
       <header class="topbar">
         <div class="search">
-          <input id="globalSearch" type="text" placeholder="Recherche rapide…" />
+          <input id="globalSearch" type="text" placeholder="Quick search…" />
         </div>
         <div class="actions">
-          <button id="newIdeaBtn" class="btn">Nouvelle idée</button>
-          <button id="exportBtn" class="btn">Exporter</button>
+          <button id="newIdeaBtn" class="btn">New Idea</button>
+          <button id="exportBtn" class="btn">Export</button>
         </div>
       </header>
 
       <!-- Sections -->
       <section id="dashboard" class="section active">
-        <h2 class="section-title">Vue d’ensemble</h2>
+        <h2 class="section-title">Overview</h2>
         <div class="cards">
           <div class="card">
-            <div class="card-header"><span>Profit du jour</span></div>
+            <div class="card-header"><span>Today's Profit</span></div>
             <div class="card-value" id="profitToday">$0.00</div>
-            <div class="card-foot">Mise à jour automatique</div>
+            <div class="card-foot">Auto-updated</div>
           </div>
           <div class="card">
-            <div class="card-header"><span>Idées</span></div>
+            <div class="card-header"><span>Ideas</span></div>
             <div class="card-value" id="ideasCount">0</div>
-            <div class="card-foot">Dernières 24h</div>
+            <div class="card-foot">Last 24h</div>
           </div>
           <div class="card">
-            <div class="card-header"><span>Commandes</span></div>
+            <div class="card-header"><span>Orders</span></div>
             <div class="card-value" id="ordersCount">0</div>
-            <div class="card-foot">Dernières 24h</div>
+            <div class="card-foot">Last 24h</div>
           </div>
         </div>
 
         <div class="panel">
           <div class="panel-header">
-            <span>Activité</span>
+            <span>Activity</span>
             <div class="panel-actions">
-              <button class="icon-button" title="Rafraîchir">⟳</button>
+              <button class="icon-button" title="Refresh">⟳</button>
             </div>
           </div>
           <div class="panel-body">
@@ -81,44 +81,44 @@
       </section>
 
       <section id="ideas" class="section">
-        <h2 class="section-title">Idées de produits</h2>
+        <h2 class="section-title">Product Ideas</h2>
         <form id="ideaForm" class="grid grid-3">
-          <input type="text" id="ideaTitle" placeholder="Titre du produit" required />
-          <input type="number" id="ideaCost" placeholder="Coût de base" min="0" step="0.01" required />
-          <button type="submit" class="btn primary">Ajouter</button>
+          <input type="text" id="ideaTitle" placeholder="Product title" required />
+          <input type="number" id="ideaCost" placeholder="Base cost" min="0" step="0.01" required />
+          <button type="submit" class="btn primary">Add</button>
         </form>
         <div class="table">
           <div class="table-head">
-            <span>Titre</span><span>Coût</span><span>Prix conseillé</span><span>Marge</span><span>Actions</span>
+            <span>Title</span><span>Cost</span><span>Suggested Price</span><span>Margin</span><span>Actions</span>
           </div>
           <div id="ideaList" class="table-body"></div>
         </div>
       </section>
 
       <section id="orders" class="section">
-        <h2 class="section-title">Commandes</h2>
+        <h2 class="section-title">Orders</h2>
         <form id="orderForm" class="grid grid-4">
-          <input type="text" id="orderProduct" placeholder="Produit" required />
-          <input type="number" id="orderRevenue" placeholder="Revenu" min="0" step="0.01" required />
-          <input type="number" id="orderCost" placeholder="Coût" min="0" step="0.01" required />
-          <button type="submit" class="btn primary">Ajouter</button>
+          <input type="text" id="orderProduct" placeholder="Product" required />
+          <input type="number" id="orderRevenue" placeholder="Revenue" min="0" step="0.01" required />
+          <input type="number" id="orderCost" placeholder="Cost" min="0" step="0.01" required />
+          <button type="submit" class="btn primary">Add</button>
         </form>
         <div class="table">
           <div class="table-head">
-            <span>Produit</span><span>Revenu</span><span>Coût</span><span>Profit</span><span>Actions</span>
+            <span>Product</span><span>Revenue</span><span>Cost</span><span>Profit</span><span>Actions</span>
           </div>
           <div id="orderList" class="table-body"></div>
         </div>
       </section>
 
       <section id="ai" class="section">
-        <h2 class="section-title">Assistant AI</h2>
+        <h2 class="section-title">AI Assistant</h2>
 
         <!-- Config summary pill -->
         <div class="ai-config-summary" id="aiConfigSummary">
-          <span class="pill">Fournisseur: <strong id="providerSummary">—</strong></span>
-          <span class="pill">Modèle: <strong id="modelSummary">—</strong></span>
-          <span class="pill">Clé API: <strong id="keySummary">Non configurée</strong></span>
+          <span class="pill">Provider: <strong id="providerSummary">—</strong></span>
+          <span class="pill">Model: <strong id="modelSummary">—</strong></span>
+          <span class="pill">API Key: <strong id="keySummary">Not configured</strong></span>
         </div>
 
         <!-- Chat container -->
@@ -127,16 +127,16 @@
             <!-- Messages appear here -->
           </div>
           <form id="chatForm" class="chat-input-bar">
-            <button type="button" id="clearChatBtn" class="icon-button" title="Effacer">🧹</button>
-            <input type="text" id="chatInput" placeholder="Écrire un message…" />
-            <button type="submit" class="btn primary">Envoyer</button>
+            <button type="button" id="clearChatBtn" class="icon-button" title="Clear">🧹</button>
+            <input type="text" id="chatInput" placeholder="Type a message…" />
+            <button type="submit" class="btn primary">Send</button>
           </form>
         </div>
 
-        <!-- AI config panel (rounded, modern) -->
+        <!-- AI config panel -->
         <div class="panel soft">
           <div class="panel-header">
-            <span>Configuration AI</span>
+            <span>AI Configuration</span>
           </div>
           <div class="panel-body grid grid-3">
             <select id="aiProvider" class="chip-input">
@@ -144,45 +144,45 @@
               <option value="openai">OpenAI</option>
             </select>
             <select id="aiModel" class="chip-input"></select>
-            <input type="password" id="apiKey" class="chip-input" placeholder="Colle ta clé API (stockée localement)" />
-            <button id="saveKeyBtn" class="btn">Sauvegarder</button>
-            <button id="testKeyBtn" class="btn">Tester</button>
-            <small class="hint">La clé est stockée dans ton navigateur (localStorage). Ne la partage pas.</small>
+            <input type="password" id="apiKey" class="chip-input" placeholder="Paste your API key (stored locally)" />
+            <button id="saveKeyBtn" class="btn">Save</button>
+            <button id="testKeyBtn" class="btn">Test</button>
+            <small class="hint">Your key is stored in your browser (localStorage). Do not share it.</small>
           </div>
         </div>
       </section>
 
       <section id="settings" class="section">
-        <h2 class="section-title">Paramètres & Thème</h2>
+        <h2 class="section-title">Settings & Theme</h2>
         <div class="panel soft">
-          <div class="panel-header"><span>Apparence</span></div>
+          <div class="panel-header"><span>Appearance</span></div>
           <div class="panel-body grid grid-3">
             <label class="setting-item">
-              <span>Thème</span>
+              <span>Theme</span>
               <select id="themeSelect">
-                <option value="dark">Noir réaliste</option>
-                <option value="amoled">AMOLED (noir profond)</option>
+                <option value="dark">Realistic Dark</option>
+                <option value="amoled">AMOLED (deep black)</option>
                 <option value="carbon">Carbon Tech</option>
                 <option value="minimal">Minimal</option>
               </select>
             </label>
             <label class="setting-item">
-              <span>Couleur d’accent</span>
+              <span>Accent Color</span>
               <input type="color" id="accentColor" value="#7C85FF" />
             </label>
             <label class="setting-item">
-              <span>Rayon des coins</span>
+              <span>Corner Radius</span>
               <input type="range" id="radiusRange" min="0" max="24" value="16" />
             </label>
             <label class="setting-item">
-              <span>Blur (verre)</span>
+              <span>Blur (glass)</span>
               <input type="range" id="blurRange" min="0" max="12" value="6" />
             </label>
             <label class="setting-item">
-              <span>Contraste</span>
+              <span>Contrast</span>
               <input type="range" id="contrastRange" min="0.8" max="1.3" step="0.01" value="1.0" />
             </label>
-            <button id="resetThemeBtn" class="btn">Réinitialiser</button>
+            <button id="resetThemeBtn" class="btn">Reset</button>
           </div>
         </div>
       </section>
