@@ -1,0 +1,16 @@
+{
+  "fr": {
+    "dashboard": "Tableau de bord",
+    "ideas": "Idées",
+    "orders": "Commandes",
+    "ai": "Assistant AI",
+    "settings": "Paramètres"
+  },
+  "en": {
+    "dashboard": "Dashboard",
+    "ideas": "Ideas",
+    "orders": "Orders",
+    "ai": "AI Assistant",
+    "settings": "Settings"
+  }
+}
