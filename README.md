@@ -1,7 +1,7 @@
 # Nomad AI Dashboard 🌍
 
 A lightweight, privacy‑first dashboard built for digital nomads, entrepreneurs, and productivity enthusiasts.  
-Deployed with free tools (Netlify, GitHub Pages) and designed for rapid iteration.
+Deployed with free tools GitHub Pages and designed for rapid iteration.
 
 ## ✨ Features
 - 🔒 Privacy‑focused: no hidden data collection
